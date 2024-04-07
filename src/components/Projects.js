@@ -44,6 +44,41 @@ export const Projects = () => {
 
   ];
 
+  const project2 = [
+    {
+      title: "Login Page",
+      description: "Full-Stack Social Media website ",
+      imgUrl: "/ProjectImages/1st/HOPe/login.png",
+    },
+    {
+      title: "Home Page",
+      description: "Overview of the website ",
+      imgUrl: "/ProjectImages/1st/HOPe/home.png",
+    },
+    {
+      title: "Exolore People",
+      description: "Explore the other people",
+      imgUrl: "/ProjectImages/1st/HOPe/explore.png",
+    },
+    {
+      title: "User Profile",
+      description: "User profile Page",
+      imgUrl: "/ProjectImages/1st/HOPe/profile.png",
+    },
+    {
+      title: "Create Post",
+      description: "share thoughts and Picture",
+      imgUrl: "/ProjectImages/1st/HOPe/post.png",
+    },
+    {
+      title: "Settings",
+      description: "Account Settings",
+      imgUrl: "/ProjectImages/1st/HOPe/settings.png",
+    },
+
+
+  ];
+
   return (
     <section className="project" id="projects">
       <Container>
@@ -87,7 +122,23 @@ export const Projects = () => {
 
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
-                        <p>Internal Server Error, Please Visit Soon </p>
+
+                        <Row>
+
+                          {
+                            project2.map((project, index) => {
+                              return (
+                                <ProjectCard
+                                  key={index}
+                                  {...project}
+                                />
+                              );
+                            })
+                          }
+
+                        </Row>
+
+
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
                         <p>Internal Server Error, Please Visit Soon </p>
